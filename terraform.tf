@@ -6,3 +6,11 @@ terraform {
     }
   }
 }
+
+terraform {
+  backend "gcs" {
+    bucket = "plab-state"
+    prefix = "terraform/gke-flux-cluster.tfstate"
+  }
+}  
+
